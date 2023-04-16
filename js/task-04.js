@@ -3,7 +3,7 @@ const refs = {
     btnDecrease: document.querySelector('[data-action="decrement"]'),
     btnIncrease: document.querySelector('[data-action="increment"]')
 }
-let counterValue=Number(refs.value.textContent);
+let counterValue=0;
 refs.btnDecrease.addEventListener("click", decreaseFunc);
 refs.btnIncrease.addEventListener("click", increaseFunc);
 function decreaseFunc() {

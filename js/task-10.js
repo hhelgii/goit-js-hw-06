@@ -11,14 +11,15 @@ const refs = {
   boxes: document.getElementById("boxes"),
 };
 
-refs.input.addEventListener("input", create);
+// refs.input.addEventListener("input", create);
 
 refs.destroyBtn.addEventListener("click", destroy);
-
-function create(event) {
-  refs.createBtn.addEventListener("click", createBoxes(event.target.value));
-}
-function createBoxes(amount) {
+refs.createBtn.addEventListener('click', createBoxes)
+// function create(event) {
+//   refs.createBtn.addEventListener("click", createBoxes(event.target.value));
+// }
+function createBoxes() {
+  const amount= refs.input.value;
   for (let i = 0; i < amount; i += 1) {
     const size = 30 + 10 * i + "px";
     const element = document.createElement("div");
